@@ -1,4 +1,4 @@
-package se.sprinto.hakan.adventuregame.model;
+package se.iths.maryam.adventuregame.model;
 
 import org.junit.jupiter.api.Test;
 

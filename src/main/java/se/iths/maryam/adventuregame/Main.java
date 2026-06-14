@@ -1,20 +1,20 @@
-package se.sprinto.hakan.adventuregame;
+package se.iths.maryam.adventuregame;
 
-import se.sprinto.hakan.adventuregame.dao.FileStatisticsDao;
-import se.sprinto.hakan.adventuregame.dao.StatisticsDao;
-import se.sprinto.hakan.adventuregame.model.Player;
-import se.sprinto.hakan.adventuregame.model.StartRoom;
-import se.sprinto.hakan.adventuregame.model.Statistics;
-import se.sprinto.hakan.adventuregame.service.StatisticsService;
-import se.sprinto.hakan.adventuregame.view.ScannerUI;
-import se.sprinto.hakan.adventuregame.view.UI;
+import se.iths.maryam.adventuregame.dao.FileStatisticsDao;
+import se.iths.maryam.adventuregame.dao.StatisticsDao;
+import se.iths.maryam.adventuregame.model.Player;
+import se.iths.maryam.adventuregame.model.StartRoom;
+import se.iths.maryam.adventuregame.model.Statistics;
+import se.iths.maryam.adventuregame.service.StatisticsService;
+import se.iths.maryam.adventuregame.view.ScannerUI;
+import se.iths.maryam.adventuregame.view.UI;
 
 public class Main {
 
     public static void main(String[] args) {
         UI ui = new ScannerUI();
         ui.showMessage("Välkommen till Äventyrsspelet!");
-        ui.showMessage("Version 1.0 av Håkan Gleissman");
+        ui.showMessage("Version " + AppInfo.getInstance().getVersion() + " av " + AppInfo.getInstance().getAuthor());
         String name = ui.getInput("Ange ditt namn:");
         Player player = new Player(name, 100, 0, 10);
 
