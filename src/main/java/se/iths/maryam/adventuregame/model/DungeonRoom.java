@@ -1,6 +1,6 @@
-package se.sprinto.hakan.adventuregame.model;
+package se.iths.maryam.adventuregame.model;
 
-import se.sprinto.hakan.adventuregame.view.UI;
+import se.iths.maryam.adventuregame.view.UI;
 
 public class DungeonRoom implements Room {
 

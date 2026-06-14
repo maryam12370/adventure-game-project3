@@ -1,12 +1,12 @@
-package se.sprinto.hakan.adventuregame.model;
+package se.iths.maryam.adventuregame.model;
 
 public class Player extends AbstractCharacter {
     private boolean foundKey;
     private boolean defeatedEnemy;
     private boolean openedChest;
 
-    public Player(String name, int health, int score, int strength) {
-        super(name, health, score, strength);
+    public Player(Builder builder) {
+        super(builder.name, builder.health, builder.score, builder.strength);
     }
 
     public boolean hasFoundKey() {
@@ -44,6 +44,37 @@ public class Player extends AbstractCharacter {
 
         if (!target.isAlive()) {
             addScore(50);
+        }
+    }
+
+    public static class Builder {
+        private String name;
+        private int health;
+        private int score;
+        private int strength;
+
+        public Builder setName(String name) {
+            this.name = name;
+            return this;
+        }
+
+        public Builder setHealth(int health) {
+            this.health = health;
+            return this;
+        }
+
+        public Builder setScore(int score) {
+            this.score = score;
+            return this;
+        }
+
+        public Builder setStrength(int strength) {
+            this.strength = strength;
+            return this;
+        }
+
+        public Player build() {
+            return new Player(this);
         }
     }
 }

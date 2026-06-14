@@ -1,4 +1,4 @@
-package se.sprinto.hakan.adventuregame.view;
+package se.iths.maryam.adventuregame.view;
 
 public interface UI {
     void showMessage(String message);

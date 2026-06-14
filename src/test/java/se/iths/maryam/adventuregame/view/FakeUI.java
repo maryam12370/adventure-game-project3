@@ -1,0 +1,19 @@
+package se.iths.maryam.adventuregame.view;
+
+public class FakeUI implements UI {
+
+    private String input;
+
+    public void setInput(String input) {
+        this.input = input;
+    }
+
+    @Override
+    public String getInput(String prompt) {
+        return input;
+    }
+
+    @Override
+    public void showMessage(String message) {
+    }
+}
